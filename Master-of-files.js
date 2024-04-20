@@ -34,3 +34,5 @@ String.prototype.isAudio = function(){
 String.prototype.isImage = function(){
   return this.isExtension(['jpg', 'jpeg', 'png', 'bmp', 'gif']);
 };
+
+// or
