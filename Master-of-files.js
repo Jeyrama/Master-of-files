@@ -36,3 +36,15 @@ String.prototype.isImage = function(){
 };
 
 // or
+
+String.prototype.isAudio = function() {
+  const str = this;
+  const [name, extension] = str.split('.');
+  return /^[a-z]+$/ig.test(name) && /^(mp3|(f|a)lac|aac)$/g.test(extension);
+};
+
+String.prototype.isImage = function() {
+  const str = this;
+  const [name, extension] = str.split('.');
+  return /^[a-z]+$/ig.test(name) && /^(jpe?g|png|bmp|gif)$/g.test(extension);
+};
