@@ -22,3 +22,15 @@ Rules:
 
 
 // Solution
+
+String.prototype.isExtension = function(ext) {
+  return new RegExp('^[A-Za-z]+\.(' + ext.join('|') + ')$').test(this);
+};
+
+String.prototype.isAudio = function(){
+  return this.isExtension(['mp3', 'flac', 'alac', 'aac']);
+};
+
+String.prototype.isImage = function(){
+  return this.isExtension(['jpg', 'jpeg', 'png', 'bmp', 'gif']);
+};
